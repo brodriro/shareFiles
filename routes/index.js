@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
   res.render('index');
 });
 
-router.post('submit', upload.single('file'), function (req, res, next) {
+router.post('/submit', upload.single('file'), function (req, res, next) {
   res.redirect('/')
 });
 module.exports = router;
