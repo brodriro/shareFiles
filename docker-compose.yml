@@ -1,0 +1,20 @@
+version: '2.1'
+
+services:
+  node:
+    image: sharefiles
+    build: .
+    ports: 
+      - 3000:3000
+    volumes:
+      - .:/home/sharedFiles
+    command: > 
+      bash -c " node bin/www "
+    stdin_open: true
+    tty: true
+    working_dir: /home/sharedFiles
+
+    
+    
+    
+    
