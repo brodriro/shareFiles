@@ -15,9 +15,13 @@ var getUpload = function () {
     return upload;
 }
 
-var getFilesUpload = function () {
+var getFilesUpload = function () {    
     var uploadFolder = './public/uploads';
     var fs = require('fs');
+
+    if (!fs.existsSync(uploadFolder)){
+        fs.mkdirSync(uploadFolder);
+    }
 
     var files = [];
 
