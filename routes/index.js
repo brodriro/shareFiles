@@ -5,15 +5,11 @@ var upload = Utils.upload;
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  res.locals.files = Utils.getFilesUpload();
   res.render('index');
 });
 
 router.post('submit', upload.single('file'), function (req, res, next) {
-  if(!req.file) return res.redirect('/');
-
-  res.locals.files = Utils.getFilesUpload();
-
-  res.render('index');
-
+  res.redirect('/')
 });
 module.exports = router;
