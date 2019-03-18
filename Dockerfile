@@ -20,10 +20,10 @@ RUN echo "Aptitude installed."
 #Install ExpressJS with EJS(templates) . (DEVELOP)
 RUN echo "Install Express JS..."
 RUN npm install express-generator -g
-RUN cd node/shareFiles
-RUN ls
-RUN express --view=ejs
-RUN echo "ExpressJS installed."
+#RUN cd node/shareFiles
+#RUN ls
+#RUN express --view=ejs
+#RUN echo "ExpressJS installed."
 
 #Install Nodemon (DEVELOP)
 #RUN npm install nodemon -g
