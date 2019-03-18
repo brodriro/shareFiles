@@ -7,12 +7,12 @@ services:
     ports: 
       - 3000:3000
     volumes:
-      - .:/home/sharedFiles
+      - .:/home/shareFiles
     command: > 
-      bash -c " node bin/www "
+      bash -c " ls && express --view=ejs  "
     stdin_open: true
     tty: true
-    working_dir: /home/sharedFiles
+    working_dir: /home/shareFiles
 
     
     
