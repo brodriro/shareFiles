@@ -1,8 +1,31 @@
+html {
+  background-color: #333;
+  background-image: url('../images/filesharing.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  height: 100%;
+  width: 100%;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:#3333338c !important;
+  height: 100%;
+  width: 100%;
 }
 
 a {
   color: #00B7FF;
+}
+
+.mContainer {
+  background: #ffffff40;
+  color: black !important;
+  border-radius: 20px;
+  padding: 10px;
+}
+.custom-list {
+  overflow: scroll;
+  max-height: calc(100% - 200px);
 }

@@ -1,0 +1,40 @@
+<div class="row">
+    <!--Form-->
+    <div class="col-9">
+        <div class="container-fluid mContainer">
+            <div class="container">
+                <h3 class="text-light">Comparte archivos de manera rapida.</h3>
+            </div>
+            <form action="/submit" method="POST" enctype="multipart/form-data" class="col-10">
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input type="file" name="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile" id="chooseFile">Choose file</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-light"><i class="fa fa-upload"></i> SUBIR</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    <!--END Form-->
+
+    <!--List-->
+    <div class="col-3">
+        <div class="card custom-list">
+            <div class="card-header"> Recientes </div>
+
+            <ul class="list-group list-group-flush">
+                <% files.forEach((item)=>{ %>
+                <li class="list-group-item"><a href="uploads/<%- item %>" target="__blank">
+                    <i class="fa fa-download"></i> <%= item.split('-')[1] %></a>
+                </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+    <!--List-->
+</div>
