@@ -27,5 +27,5 @@ a {
 }
 .custom-list {
   overflow: scroll;
-  max-height: calc(100% - 200px);
+  max-height: calc(100% - 20%);
 }
